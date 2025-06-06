@@ -1,14 +1,10 @@
 // import Image from "next/image";
-import { fetchData } from "@/utils/api";
 import Header from "@/components/Header";
 import Main from "@/components/Main";
 import Footer from "@/components/Footer";
 
 
-export default async function Home() {
-  
-  const results = await fetchData("http:localhost:3001/api/get");
-  console.log("Results:", results);
+export default function Home() {
 
   return (
     <div>

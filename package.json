@@ -2,6 +2,7 @@
   "name": "unstyle-frontend",
   "version": "0.1.0",
   "private": true,
+  "$schema": "https://json.schemastore.org/package.json",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

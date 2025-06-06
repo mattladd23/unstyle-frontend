@@ -1,4 +1,6 @@
-export const fetchData = async (url: string) => {
+import { InitialValue } from "@/types/InitialValue";
+
+export const fetchData = async (url: string):Promise<InitialValue[]> => {
     try {
         const response = await fetch(url);
         if (!response.ok) {
