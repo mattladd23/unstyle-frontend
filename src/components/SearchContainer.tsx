@@ -5,7 +5,7 @@ export default function SearchContainer() {
             <input
                 type="text"
                 placeholder="Search..."
-                className="flex-grow p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
+                className="flex-grow p-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
             />
         </div>
     );
