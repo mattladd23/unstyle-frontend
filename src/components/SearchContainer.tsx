@@ -8,7 +8,7 @@ export default function SearchContainer() {
             <input
                 type="text"
                 placeholder={placeholderText}
-                className="flex-grow p-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600 placeholder-orange-600 text-gray-900 hover:shadow hover:shadow-gray-300"
+                className="flex-grow p-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600 text-gray-900 hover:shadow hover:shadow-gray-300"
             />
         </div>
     );
