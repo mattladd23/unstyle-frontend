@@ -1,4 +1,9 @@
-export default function SearchContainer() {
+interface SearchContainerProps {
+    searchInput: string;
+    setSearchTerm: (term: string) => void;
+}
+
+export default function SearchContainer({searchInput, setSearchTerm}: SearchContainerProps) {
 
     const placeholderText : string = `E.g. "padding-bottom"`;
 
@@ -9,6 +14,8 @@ export default function SearchContainer() {
                 type="text"
                 placeholder={placeholderText}
                 className="flex-grow p-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600 text-gray-900 hover:shadow hover:shadow-gray-300"
+                value={searchInput}
+                onChange={(e) => setSearchTerm(e.target.value)}
             />
         </div>
     );
