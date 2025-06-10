@@ -3,7 +3,7 @@ export default function SearchContainer() {
     const placeholderText : string = `E.g. "padding-bottom"`;
 
     return (
-        <div className="flex flex-col items-center justify-between p-4">
+        <div className="flex flex-col items-center justify-between my-4 p-4">
             <h2 className="text-xl mb-4 text-gray-900">Enter your css property below...</h2>
             <input
                 type="text"
