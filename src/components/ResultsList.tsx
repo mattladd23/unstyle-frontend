@@ -1,18 +1,35 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { fetchData } from "@/utils/api";
 import { InitialValue } from "@/types/InitialValue";
 import Result from "./Result";
 
-export default async function ResultsList() {
+export default function ResultsList({ searchTerm }: { searchTerm: string }) {
 
-    const results = await fetchData("http://localhost:3001/api/get");
+    const [results, setResults] = useState<InitialValue[]>([]);
 
-    const resultsList = results.map((result: InitialValue) =>
-        <Result key={result.id} id={result.id} url={result.url} initialValue={result.initialValue} />
-    )
+    useEffect(() => {
+        fetchData("http://localhost:3001/api/get")
+            .then((data) => setResults(data));
+    }, []);
+
+    const filteredResults = results.filter((result : InitialValue) => {
+        return result.url.toLowerCase().includes(searchTerm.toLowerCase());
+    });
 
     return (
-        <div>
-            <ul>{resultsList}</ul>
+        <div>            
+            <ul>
+                {filteredResults.map((result: InitialValue) => (
+                    <Result
+                        key={result.id}
+                        id={result.id}
+                        url={result.url}
+                        initialValue={result.initialValue}
+                    />
+                ))}
+            </ul>
         </div>
     )
 }
