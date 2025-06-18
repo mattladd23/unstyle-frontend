@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { fetchData } from "@/utils/api";
 import { InitialValue } from "@/types/InitialValue";
 import Result from "./Result";
+import getPropertyName from "@/utils/getPropertyName";
 
 export default function ResultsList({ searchTerm }: { searchTerm: string }) {
 
@@ -15,7 +16,8 @@ export default function ResultsList({ searchTerm }: { searchTerm: string }) {
     }, []);
 
     const filteredResults = results.filter((result : InitialValue) => {
-        return result.url.toLowerCase().includes(searchTerm.toLowerCase());
+        const name = getPropertyName(result.url);
+        return name.toLowerCase().includes(searchTerm.toLowerCase());
     });
 
     return (
