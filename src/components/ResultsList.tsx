@@ -27,7 +27,7 @@ export default function ResultsList({ searchTerm }: { searchTerm: string }) {
             ) : filteredResults.length === 0 && searchTerm !== "" ? (
                 <>
                     <h3 className="text-lg font-bold text-teal-700 mb-2 text-center">
-                        `No results found for ${searchTerm}`
+                        No results found for &ldquo;{searchTerm}&rdquo;
                     </h3>
                     <p className="text-gray-900 text-center">Try a different search term.</p>
                 </>                    
