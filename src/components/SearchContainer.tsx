@@ -1,5 +1,3 @@
-"use client";
-
 interface SearchContainerProps {
     searchInput: string;
     setSearchTerm: (term: string) => void;

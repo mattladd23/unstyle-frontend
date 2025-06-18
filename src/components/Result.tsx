@@ -1,5 +1,3 @@
-"use client";
-
 import { InitialValue } from "@/types/InitialValue";
 import getPropertyName from "@/utils/getPropertyName";
 import MozillaLink from "./MozillaLink";
