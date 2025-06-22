@@ -21,12 +21,13 @@ export default function Result({ url, initialValue }: InitialValue) {
             <h3 className="text-xl font-bold text-teal-700 mb-2">
                 {propertyName}
             </h3>
-            <div
+            <button
+                className="mb-2"
                 onClick={handleCopy}
-                title={isCopied ? "Copied!" : "Copy to clipboard"}
+                title={isCopied ? "Copied!" : "Copy to clipboard"}                
             >
                 <code
-                    className="inline-block bg-gray-300 font-black rounded-lg mb-2 px-2 cursor-pointer transition-transform hover:outline"
+                    className="inline-block bg-gray-300 font-black rounded-lg px-2 cursor-pointer"
                 >
                     {codeSnippet}
                 </code>
@@ -34,7 +35,7 @@ export default function Result({ url, initialValue }: InitialValue) {
                     icon={isCopied ? faCheck : faCopy}
                     className={`inline-block pb-1 pl-1 mr-1 w-3 h-3 cursor-pointer transition-transform ${isCopied ? "text-teal-700" : "text-gray-400 hover:text-gray-800"}`}
                 />
-            </div>
+            </button>
             <small className="block text-gray-900 p-1">Read more at <MozillaLink url={url}/></small>
         </li>
     );
