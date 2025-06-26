@@ -1,17 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { fetchData } from "@/utils/api";
+import { fetchResults } from "@/utils/api";
 import { InitialValue } from "@/types/InitialValue";
+import { useCopyToClipboard } from "usehooks-ts";
 import Result from "./Result";
 import getPropertyName from "@/utils/getPropertyName";
 
 export default function ResultsList({ searchTerm }: { searchTerm: string }) {
 
     const [results, setResults] = useState<InitialValue[]>([]);
+    const [, copy] = useCopyToClipboard();
+    const [copiedSnippet, setCopiedSnippet] = useState<string | null>(null);
 
     useEffect(() => {
-        fetchData("http://localhost:3001/api/get")
+        fetchResults("http://localhost:3001/api/get")
             .then((data) => setResults(data));
     }, []);
 
@@ -19,6 +22,13 @@ export default function ResultsList({ searchTerm }: { searchTerm: string }) {
         const name = getPropertyName(result.url);
         return name.toLowerCase().includes(searchTerm.toLowerCase());
     });
+
+    const handleCopy = (codeSnippet: string) => {
+        copy(codeSnippet)
+           .then(() => {
+                setCopiedSnippet(codeSnippet);
+            })
+    }
 
     return (
         <div>            
@@ -42,6 +52,8 @@ export default function ResultsList({ searchTerm }: { searchTerm: string }) {
                             id={result.id}
                             url={result.url}
                             initialValue={result.initialValue}
+                            onCopy={handleCopy}
+                            copiedSnippet={copiedSnippet}
                         />
                     ))
                 }   
