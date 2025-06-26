@@ -1,20 +1,19 @@
 import { InitialValue } from "@/types/InitialValue";
 import getPropertyName from "@/utils/getPropertyName";
 import MozillaLink from "./MozillaLink";
-import { useCopyToClipboard } from "usehooks-ts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
 
-export default function Result({ url, initialValue }: InitialValue) {
+interface ResultProps extends InitialValue {
+    onCopy: (codeSnippet: string) => void;
+    copiedSnippet: string | null;
+}
+
+export default function Result({ url, initialValue, onCopy, copiedSnippet }: ResultProps) {   
 
     const propertyName: string = getPropertyName(url);
     const codeSnippet: string = `${propertyName}: ${initialValue};`;
-
-    const [copiedCode, copy] = useCopyToClipboard();
-    const handleCopy = () => {
-        copy(codeSnippet);
-    }
-    const isCopied: boolean = copiedCode === codeSnippet;
+    const isCopied: boolean = copiedSnippet === codeSnippet;
 
     return (
         <li className="rounded-xl p-4 mb-4 bg-white transition-transform hover:shadow hover:shadow-grey-500 hover:scale-102">
@@ -23,8 +22,8 @@ export default function Result({ url, initialValue }: InitialValue) {
             </h3>
             <button
                 className="mb-2"
-                onClick={handleCopy}
-                title={isCopied ? "Copied!" : "Copy to clipboard"}                
+                onClick={() => onCopy(codeSnippet)}
+                title={isCopied ? "Copied" : "Copy to clipboard"}                
             >
                 <code
                     className="inline-block bg-gray-300 font-black rounded-lg px-2 cursor-pointer"
