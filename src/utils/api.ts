@@ -6,7 +6,8 @@ export const fetchResults = async (url: string):Promise<InitialValue[]> => {
         if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return await response.json();
+        const data = await response.json();
+        return data.initialValues || [];
     } catch (error) {
         console.error("Fetch error:", error);
         throw error;
