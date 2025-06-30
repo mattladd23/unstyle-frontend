@@ -14,7 +14,7 @@ export default function ResultsList({ searchTerm }: { searchTerm: string }) {
     const [copiedSnippet, setCopiedSnippet] = useState<string | null>(null);
 
     useEffect(() => {
-        fetchResults("http://localhost:3001/api/get")
+        fetchResults("https://api.unstyle.dev/initial-values")
             .then((data) => setResults(data));
     }, []);
 
