@@ -31,7 +31,7 @@ export default function ResultsList({ searchTerm }: { searchTerm: string }) {
     }
 
     return (
-        <div>            
+        <div className="px-4">            
             {searchTerm === "" ? (
                     <h3 className="text-lg font-bold text-teal-700 mb-2 text-center">
                         Your results will appear here...
