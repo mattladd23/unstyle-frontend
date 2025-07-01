@@ -16,7 +16,7 @@ export default function Result({ url, initialValue, onCopy, copiedSnippet }: Res
     const isCopied: boolean = copiedSnippet === codeSnippet;
 
     return (
-        <li className="rounded-xl p-4 mb-4 bg-white dark:bg-gray-800 dark:border-2 dark:border-gray-300 transition-transform hover:shadow hover:shadow-grey-500 hover:scale-102">
+        <li className="rounded-xl p-4 mb-4 bg-white dark:bg-gray-950 dark:border dark:border-gray-300 transition-transform hover:shadow hover:shadow-grey-500 hover:scale-102 dark:hover:shadow-none">
             <h3 className="text-xl font-bold text-teal-700 mb-2">
                 {propertyName}
             </h3>
