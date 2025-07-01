@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
 
   return (
-    <div className="grid grid-cols-12 bg-gray-100">
+    <div className="grid grid-cols-12 bg-gray-100 dark:bg-gray-950">
       <Header/>
       <Main/>
       <Footer/>

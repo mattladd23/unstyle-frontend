@@ -16,7 +16,7 @@ export default function Result({ url, initialValue, onCopy, copiedSnippet }: Res
     const isCopied: boolean = copiedSnippet === codeSnippet;
 
     return (
-        <li className="rounded-xl p-4 mb-4 bg-white transition-transform hover:shadow hover:shadow-grey-500 hover:scale-102">
+        <li className="rounded-xl p-4 mb-4 bg-white dark:bg-gray-950 dark:border dark:border-gray-300 transition-transform hover:shadow hover:shadow-grey-500 hover:scale-102 dark:hover:shadow-none">
             <h3 className="text-xl font-bold text-teal-700 mb-2">
                 {propertyName}
             </h3>
@@ -32,10 +32,10 @@ export default function Result({ url, initialValue, onCopy, copiedSnippet }: Res
                 </code>
                 <FontAwesomeIcon
                     icon={isCopied ? faCheck : faCopy}
-                    className={`inline-block pb-1 pl-1 mr-1 w-3 h-3 cursor-pointer transition-transform ${isCopied ? "text-teal-700" : "text-gray-400 hover:text-gray-800"}`}
+                    className={`inline-block pb-1 pl-1 mr-1 w-3 h-3 cursor-pointer transition-transform ${isCopied ? "text-teal-700" : "text-gray-400 hover:text-gray-800 dark:hover:text-orange-600"}`}
                 />
             </button>
-            <small className="block text-gray-900 p-1">Read more at <MozillaLink url={url}/></small>
+            <small className="block text-gray-900 dark:text-white p-1">Read more at <MozillaLink url={url}/></small>
         </li>
     );
 }
