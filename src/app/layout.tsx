@@ -8,8 +8,8 @@ const unstyleTextFont = Red_Hat_Text({
 });
 
 export const metadata: Metadata = {
-  title: "Unstyle - CSS Initial Value Lookup",
-  description: "Unstyle your CSS properties with Unstyle's search through more than 400 values.",
+  title: "Unstyle - Your CSS Initial Value Lookup",
+  description: "Rapidly find CSS initial values with Unstyle's search through more than 400 properties.",
 };
 
 export default function RootLayout({
