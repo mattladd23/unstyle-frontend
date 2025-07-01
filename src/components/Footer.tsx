@@ -11,10 +11,10 @@ const githubLambdaUrl: string = "https://github.com/mattladd23/unstyle-lambda";
 export default function Footer() {
 
     return (
-        <footer className="grid col-span-12 p-4 gap-4">
+        <footer className="grid col-span-12 p-4 gap-4 dark:text-white">
             <small className="col-span-12 md:col-start-1 md:col-end-4">All property and initial value data sourced from <MozillaLink url={url} /> - © Mozilla.</small>
             <small className="col-span-12 md:col-start-12 md: col-end-13">
-                Github<FontAwesomeIcon className="col-span-12 md:col-start-11 md:col-end-13 h-5 w-5 my-auto text-gray-900" icon={faSquareGithub} />:
+                Github<FontAwesomeIcon className="col-span-12 md:col-start-11 md:col-end-13 h-5 w-5 my-auto text-gray-900 dark:text-white" icon={faSquareGithub} />:
                 <a href={githubAPIUrl} target="_blank" className="text-orange-600 underline underline-offset-1 hover:no-underline mx-1">
                     API<FontAwesomeIcon className="inline-block pb-1 pl-1 mr-1 w-3 h-3" icon={faArrowUpRightFromSquare} />
                 </a>
