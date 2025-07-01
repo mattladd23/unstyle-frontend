@@ -26,7 +26,7 @@ export default function Result({ url, initialValue, onCopy, copiedSnippet }: Res
                 title={isCopied ? "Copied" : "Copy to clipboard"}                
             >
                 <code
-                    className="inline-block bg-gray-300 font-black rounded-lg px-2 cursor-pointer"
+                    className="inline bg-gray-300 font-black box-decoration-clone rounded-lg p-1 cursor-pointer"
                 >
                     {codeSnippet}
                 </code>
