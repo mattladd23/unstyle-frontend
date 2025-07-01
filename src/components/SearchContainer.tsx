@@ -17,7 +17,7 @@ export default function SearchContainer({searchInput, setSearchTerm}: SearchCont
                 <input
                     type="text"
                     placeholder={placeholderText}
-                    className="flex-grow p-3 border bg-white dark:bg-gray-800 border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-600 dark:focus:border-0 text-gray-900 dark:text-white hover:shadow hover:shadow-gray-300"
+                    className="flex-grow p-3 border bg-white dark:bg-gray-800 border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-600 dark:focus:border-gray-800 text-gray-900 dark:text-white hover:shadow hover:shadow-gray-300"
                     value={searchInput}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
