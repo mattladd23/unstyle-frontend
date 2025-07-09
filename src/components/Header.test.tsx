@@ -9,4 +9,10 @@ describe('Header Component', () => {
     const titleText = screen.getByText(/Unstyle/i);
     expect(titleText).toBeInTheDocument();
   });
+
+  it('renders the correct fontawesome icon', () => {
+    render(<Header />);
+    const iconClass = screen.getByTestId('unstyle-icon')
+    expect(iconClass).toBeInTheDocument();
+  })
 });
