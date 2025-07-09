@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import Footer from './Footer';
 
-describe('Header Component', () => {
+describe('Footer Component', () => {
   it('renders the header with the Mozilla credit start', () => {
     render(<Footer />);
     const mozillaCreditStartText = screen.getByText(/All property and initial value data sourced from /i);
