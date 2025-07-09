@@ -13,6 +13,7 @@ export default function MozillaLink({ url }: { url: string }) {
             <FontAwesomeIcon
                 className="inline-block pb-1 pl-1 mr-1 w-3 h-3"
                 icon={faArrowUpRightFromSquare}
+                data-testid="mozilla-link-icon"
             />
         </a>
     )
