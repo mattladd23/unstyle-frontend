@@ -14,7 +14,7 @@ export default function SearchContainer({searchInput, setSearchTerm}: SearchCont
         <div className="flex flex-col items-center justify-between my-4 p-4">
             <div className="flex">
               <h2 className="text-4xl mb-4 text-gray-900 dark:text-white text-center">Rapidly find CSS initial values</h2>
-              <FontAwesomeIcon className="inline-block ml-2 text-2xl  text-teal-700" icon={faRocket} />
+              <FontAwesomeIcon className="inline-block ml-2 text-2xl  text-teal-700" icon={faRocket} data-testid="rocket-icon"/>
             </div>        
             <p className="text-xl mb-4 text-gray-900 dark:text-white text-center">Simply enter a propery name below!</p>
             <div className="flex">                
@@ -25,7 +25,7 @@ export default function SearchContainer({searchInput, setSearchTerm}: SearchCont
                     value={searchInput}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <FontAwesomeIcon className="inline-block my-auto ml-2 text-2xl text-orange-600" icon={faMagnifyingGlass} />
+                <FontAwesomeIcon className="inline-block my-auto ml-2 text-2xl text-orange-600" icon={faMagnifyingGlass} data-testid="magnifying-glass-icon" />
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
-import { InitialValue } from "@/types/InitialValue";
-import getPropertyName from "@/utils/getPropertyName";
+import { InitialValue } from "../types/InitialValue";
+import getPropertyName from "../utils/getPropertyName";
 import MozillaLink from "./MozillaLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -33,6 +33,7 @@ export default function Result({ url, initialValue, onCopy, copiedSnippet }: Res
                 <FontAwesomeIcon
                     icon={isCopied ? faCheck : faCopy}
                     className={`inline-block pb-1 pl-1 mr-1 w-3 h-3 cursor-pointer transition-transform ${isCopied ? "text-teal-700" : "text-gray-400 hover:text-gray-800 dark:hover:text-white"}`}
+                    data-testid={isCopied ? "copy-success-icon" : "copy-icon"}
                 />
             </button>
             <small className="block text-gray-900 dark:text-white p-1">Read more at <MozillaLink url={url}/></small>
