@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { fetchResults } from "@/utils/api";
-import { InitialValue } from "@/types/InitialValue";
+import { fetchResults } from "../utils/api";
+import { InitialValue } from "../types/InitialValue";
 import { useCopyToClipboard } from "usehooks-ts";
 import Result from "./Result";
-import getPropertyName from "@/utils/getPropertyName";
+import getPropertyName from "../utils/getPropertyName";
 
 export default function ResultsList({ searchTerm }: { searchTerm: string }) {
 
