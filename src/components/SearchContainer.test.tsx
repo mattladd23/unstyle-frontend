@@ -3,7 +3,7 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import SearchContainer from "./SearchContainer";
 
-describe("SearchContainer", () => {
+describe("Search Container", () => {
   it("renders heading and subtext", () => {
     render(<SearchContainer searchInput="" setSearchTerm={() => {}} />);
     expect(screen.getByText(/Rapidly find CSS initial values/i)).toBeInTheDocument();
