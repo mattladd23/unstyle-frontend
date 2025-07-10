@@ -35,7 +35,7 @@ vi.mock("usehooks-ts", async () => {
   };
 });
 
-describe("<ResultsList />", () => {
+describe("Results List", () => {
   const mockCopy = vi.fn(() => Promise.resolve());
 
   beforeEach(() => {
