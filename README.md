@@ -114,4 +114,4 @@ You simply:
 
 ---
 
-Built by [Matt Ladd](https://www.linkedin.com/in/matt-ladd-216644121/) - always learning, always building. Any feedback is greatly appreciated :relaxed:.
+Built by [Matt Ladd](https://www.linkedin.com/in/matt-ladd-216644121/) - always learning, always building. Any feedback is greatly appreciated :relaxed:
