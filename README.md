@@ -86,7 +86,7 @@ You simply:
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vercel](https://vercel.com/) (hosting)
-- [Vitest](https://vitest.dev/) with some hints of [Jest](https://www.npmjs.com/package/@testing-library/jest-dom)
+- [Vitest](https://vitest.dev/) with a hint of [Jest](https://www.npmjs.com/package/@testing-library/jest-dom)
 
 :cloud: See [unstyle-lambda](https://github.com/mattladd23/unstyle-lambda) for Unstyle's full AWS Tech Stack
 
