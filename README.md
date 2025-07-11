@@ -58,7 +58,7 @@ Fully deployed to a secure, production-ready URL with a custom domain and SSL su
 
 ## :mega: Unstyle's USP
 
-Unlike reset libraries that force consistent styles, this tool helps you understand what styles actually start as, giving you full control and clarity. It’s perfect for learning, debugging, or building from a blank slate — whether you’re refining your craft or showcasing your skills to future employers.
+Unlike reset libraries that force consistent styles, Unstyle helps you understand what styles actually start as, giving you full control and clarity. This makes it ideal for learning, debugging, or building from a blank slate — whether you’re refining your craft or showcasing your skills to future employers.
 
 ### :earth_africa: A Greener Way to Code
 
