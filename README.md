@@ -7,13 +7,12 @@ This is the Next.js/TypeScript frontend for unstyle.dev — a lightning-fast CSS
 Thank you for dropping by to find out more about Unstyle. Keep reading to learn about the following:
 
 - :fist:[Unstyle's Purpose](#fist-unstyles-purpose)
-- :key:[Core features](#key-unstyles-core-features)
+- :key:[Core Features](#key-unstyles-core-features)
 - :mega:[USP](#mega-unstyles-usp)
-- :earth_africa:[Positive environmental impact](#earth_africa-a-greener-way-to-code)
-- :wrench:[How to use Unstyle](#wrench-how-to-use-unstyle)
+- :earth_africa:[Unstyle's Positive Environmental Impact](#earth_africa-a-greener-way-to-code)
+- :wrench:[How to Use Unstyle](#wrench-how-to-use-unstyle)
 - :hammer:[Tech Stack](#hammer-tech-stack)
 - :computer:[Developer Docs](#computer-develop)
-
 
 ## :fist: Unstyle's Purpose
 
