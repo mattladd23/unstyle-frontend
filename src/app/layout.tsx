@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Red_Hat_Text } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const unstyleTextFont = Red_Hat_Text({
   variable: "--font-red-hat-text",
@@ -23,6 +24,7 @@ export default function RootLayout({
         className={`${unstyleTextFont.className} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
