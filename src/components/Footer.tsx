@@ -18,7 +18,7 @@ export default function Footer() {
                 <a
                     href={githubAPIUrl}
                     target="_blank"
-                    className="text-orange-600 underline underline-offset-1 hover:no-underline mx-1"
+                    className="text-orange-700 underline underline-offset-1 hover:no-underline mx-1"
                     data-testid="github-api-link"
                 >
                     API<FontAwesomeIcon className="inline-block pb-1 pl-1 mr-1 w-3 h-3" icon={faArrowUpRightFromSquare} />
@@ -26,7 +26,7 @@ export default function Footer() {
                 <a
                     href={githubFrontendUrl}
                     target="_blank"
-                    className="text-orange-600 underline underline-offset-1 hover:no-underline mr-1"
+                    className="text-orange-700 underline underline-offset-1 hover:no-underline mr-1"
                     data-testid="github-frontend-link"
                 >
                     Frontend<FontAwesomeIcon className="inline-block pb-1 pl-1 mr-1 w-3 h-3" icon={faArrowUpRightFromSquare} />
@@ -34,7 +34,7 @@ export default function Footer() {
                 <a
                     href={githubLambdaUrl}
                     target="_blank"
-                    className="text-orange-600 underline underline-offset-1 hover:no-underline mr-1"
+                    className="text-orange-700 underline underline-offset-1 hover:no-underline mr-1"
                     data-testid="github-lambda-link"
                 >
                     Lambda<FontAwesomeIcon className="inline-block pb-1 pl-1 mr-1 w-3 h-3" icon={faArrowUpRightFromSquare} />
