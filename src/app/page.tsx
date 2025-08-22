@@ -7,7 +7,7 @@ config.autoAddCss = false
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-12 bg-gray-100 dark:bg-gray-950">
+    <div className="grid grid-cols-12 bg-gray-50 dark:bg-gray-950">
       <Header/>
       <Main/>
       <Footer/>
