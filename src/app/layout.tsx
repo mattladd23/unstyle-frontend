@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${unstyleTextFont.className} antialiased`}
+        className={`${unstyleTextFont.className} bg-gray-50 dark:bg-gray-950 antialiased`}
       >
         {children}
         <Analytics />
