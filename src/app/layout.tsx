@@ -15,6 +15,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://unstyle.dev",
   },
+  openGraph: {
+    title: "Unstyle - Your CSS Initial Value Lookup",
+    description: "Rapidly find CSS initial values with Unstyle's search through more than 400 properties.",
+    url: "https://unstyle.dev",
+    siteName: "Unstyle",
+    type: "website",
+    images: [
+      {
+        url: "https://unstyle.dev/favicon.ico",
+        width: 40,
+        height: 40,
+        alt: "Unstyle Logo"
+      }
+    ]
+  }
 };
 
 export default function RootLayout({
