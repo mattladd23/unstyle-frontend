@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { fetchResults } from "../utils/api";
+import { useState } from "react";
+import useFetch from "../utils/api";
 import { InitialValue } from "../types/InitialValue";
 import { useCopyToClipboard } from "usehooks-ts";
 import Result from "./Result";
@@ -9,16 +9,11 @@ import getPropertyName from "../utils/getPropertyName";
 
 export default function ResultsList({ searchTerm }: { searchTerm: string }) {
 
-    const [results, setResults] = useState<InitialValue[]>([]);
+    const { loading, error, data = [] } = useFetch<InitialValue[]>("https://api.unstyle.dev/initial-values");
     const [, copy] = useCopyToClipboard();
     const [copiedSnippet, setCopiedSnippet] = useState<string | null>(null);
 
-    useEffect(() => {
-        fetchResults("https://api.unstyle.dev/initial-values")
-            .then((data) => setResults(data));
-    }, []);
-
-    const filteredResults = results.filter((result : InitialValue) => {
+    const filteredResults = data.filter((result : InitialValue) => {
         const name = getPropertyName(result.url);
         return name.toLowerCase().includes(searchTerm.toLowerCase());
     });
@@ -29,6 +24,10 @@ export default function ResultsList({ searchTerm }: { searchTerm: string }) {
                 setCopiedSnippet(codeSnippet);
             })
     }
+
+    if (loading) return <h3 className="text-lg font-bold text-teal-700 dark:text-white mb-2 text-center">Loading...</h3>;
+
+    if (error) return <h3 className="text-lg font-bold text-teal-700 dark:text-white mb-2 text-center">Oh snap! Something's not quite right...</h3>;
 
     return (
         <div className="px-4">            
